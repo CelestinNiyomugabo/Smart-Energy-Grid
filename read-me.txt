@@ -1,0 +1,10 @@
+# Step 1: Install the required tools and packages
+# Step 2: Start EMQX (emqxstart). We have verified the EMQX status from: http://localhost:18083/status
+# Step 3: Create a timescale DB: CREATE DATABASE smart_grid;
+# Step 4: Login to newly created DB: \c smart_grid
+# Step 5: Create data generation script
+
+
+# Create hypertable: CREATE EXTENSION IF NOT EXISTS timescaledb;
+# Convert table: SELECT create_hypertable('energy_readings', 'timestamp', chunk_time_interval => INTERVAL '1 day');
+
